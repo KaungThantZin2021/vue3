@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<style>
+    .btn-green {
+        color: whitesmoke;
+        background: green;
+    }
+
+    .btn-red {
+        color: whitesmoke;
+        background: red;
+    }
+</style>
+<body>
+    
+    <div id="app">
+        <input type="text" v-model="greeting">
+
+        <p>{{ greeting }} ({{ greeting.length }})</p>
+
+        <hr>
+
+        <button :class="btnActive ? 'btn-green' : 'btn-red'" @click="btnToggle">Click me</button>
+
+        <hr>
+
+        <a href="assignment.html">Go to Assignment</a>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    greeting: 'Hello world',
+                    btnActive: true,
+                }
+            },
+            methods: {
+                btnToggle() {
+                    this.btnActive = !this.btnActive;
+                }
+            },
+            mounted() {
+                setTimeout(() => {
+                    this.greeting = "This is Vue 3."
+                }, 3000);
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

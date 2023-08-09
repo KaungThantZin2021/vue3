@@ -1,0 +1,10 @@
+{
+    "assignments": [
+        {"id": 1, "name": "Test 1", "complete": false, "tag": "math"},
+        {"id": 2, "name": "Test 2", "complete": false, "tag": "eng"},
+        {"id": 3, "name": "Test 3", "complete": false, "tag": "phys"},
+        {"id": 4, "name": "Test 4", "complete": false, "tag": "phys"},
+        {"id": 5, "name": "Php", "complete": true, "tag": "programming"},
+        {"id": 6, "name": "Java", "complete": true, "tag": "programming"}
+    ]
+}
